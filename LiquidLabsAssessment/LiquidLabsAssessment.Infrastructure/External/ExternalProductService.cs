@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace LiquidLabsAssessment.Infrastructure.External;
 
-internal class ExternalProductService : IExternalProductService
+public class ExternalProductService : IExternalProductService
 {
     private readonly HttpClient _httpClient;
     private readonly ExternalApiSettings _settings;

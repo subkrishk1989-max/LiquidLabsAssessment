@@ -5,10 +5,6 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Middleware\" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="14.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.9" />
@@ -20,5 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LiquidLabsAssessment.Application\LiquidLabsAssessment.Application.csproj" />
+    <ProjectReference Include="..\LiquidLabsAssessment.Infrastructure\LiquidLabsAssessment.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

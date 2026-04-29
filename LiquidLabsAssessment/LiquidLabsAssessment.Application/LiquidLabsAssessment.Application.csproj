@@ -9,10 +9,6 @@
   <ItemGroup>
     <PackageReference Include="MediatR" Version="14.1.0" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Common\" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LiquidLabsAssessment.Domain\LiquidLabsAssessment.Domain.csproj" />
