@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{29892E97-4C8A-4FE4-ADB4-D1BC5B8CCD53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{71DABA3E-3FF2-4D9E-AF18-46E1FF131DB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{16C0811F-E1A9-4940-97EE-01D9F620E0DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiquidLabsAssessment.Api", "LiquidLabsAssessment.Api\LiquidLabsAssessment.Api.csproj", "{E78F9542-8086-4EAD-9805-FBD30B42EDC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiquidLabsAssessment.Application", "LiquidLabsAssessment.Application\LiquidLabsAssessment.Application.csproj", "{417C3951-305B-4573-89F0-13672B9E463A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiquidLabsAssessment.Infrastructure", "LiquidLabsAssessment.Infrastructure\LiquidLabsAssessment.Infrastructure.csproj", "{B49F45D7-F63D-40B9-8F69-D7BBD9A380E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiquidLabsAssessment.Domain", "LiquidLabsAssessment.Domain\LiquidLabsAssessment.Domain.csproj", "{DE161AEB-E675-4CBF-AD42-E6869C0C94F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E78F9542-8086-4EAD-9805-FBD30B42EDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78F9542-8086-4EAD-9805-FBD30B42EDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78F9542-8086-4EAD-9805-FBD30B42EDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78F9542-8086-4EAD-9805-FBD30B42EDC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417C3951-305B-4573-89F0-13672B9E463A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417C3951-305B-4573-89F0-13672B9E463A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417C3951-305B-4573-89F0-13672B9E463A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417C3951-305B-4573-89F0-13672B9E463A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49F45D7-F63D-40B9-8F69-D7BBD9A380E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49F45D7-F63D-40B9-8F69-D7BBD9A380E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49F45D7-F63D-40B9-8F69-D7BBD9A380E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49F45D7-F63D-40B9-8F69-D7BBD9A380E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE161AEB-E675-4CBF-AD42-E6869C0C94F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE161AEB-E675-4CBF-AD42-E6869C0C94F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE161AEB-E675-4CBF-AD42-E6869C0C94F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE161AEB-E675-4CBF-AD42-E6869C0C94F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E78F9542-8086-4EAD-9805-FBD30B42EDC0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{417C3951-305B-4573-89F0-13672B9E463A} = {29892E97-4C8A-4FE4-ADB4-D1BC5B8CCD53}
+		{B49F45D7-F63D-40B9-8F69-D7BBD9A380E9} = {16C0811F-E1A9-4940-97EE-01D9F620E0DB}
+		{DE161AEB-E675-4CBF-AD42-E6869C0C94F2} = {71DABA3E-3FF2-4D9E-AF18-46E1FF131DB8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0995016-D217-45E1-BC36-AAA211DD6739}
+	EndGlobalSection
+EndGlobal

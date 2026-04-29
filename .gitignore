@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/LiquidLabsAssessment/LiquidLabsAssessment.Application/obj
+/LiquidLabsAssessment/.vs/LiquidLabsAssessment
+/LiquidLabsAssessment/LiquidLabsAssessment.Api/bin/Debug/net9.0
+/LiquidLabsAssessment/LiquidLabsAssessment.Api/obj
+/LiquidLabsAssessment/LiquidLabsAssessment.Application/bin/Debug/net9.0
+/LiquidLabsAssessment/LiquidLabsAssessment.Domain/bin/Debug/net9.0
+/LiquidLabsAssessment/LiquidLabsAssessment.Domain/obj
+/LiquidLabsAssessment/LiquidLabsAssessment.Infrastructure/bin/Debug/net9.0
+/LiquidLabsAssessment/LiquidLabsAssessment.Infrastructure/obj
