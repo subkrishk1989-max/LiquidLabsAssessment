@@ -7,9 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.1.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Features\Products\Handlers\" />
-    <Folder Include="Features\Products\Queries\" />
   </ItemGroup>
 
   <ItemGroup>

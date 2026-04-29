@@ -37,7 +37,7 @@ internal class ExternalProductService : IExternalProductService
         }
     }
 
-    public async Task<Product?> GetByIdAsync(string id)
+    public async Task<Product?> GetByIdAsync(int id)
     {
         try
         {

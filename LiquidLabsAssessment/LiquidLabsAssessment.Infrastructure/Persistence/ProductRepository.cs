@@ -75,9 +75,60 @@ public class ProductRepository : IProductRepository
         return products.Values;
     }
 
-    public Task<Product?> GetByIdAsync(int id)
+    public async Task<Product?> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        const string query = @"
+        SELECT 
+            p.Id,
+            p.Name,
+            pa.Id AS AttributeId,
+            pa.ProductId,
+            pa.AttributeName,
+            pa.AttributeValue
+        FROM Products p
+        LEFT JOIN ProductAttributes pa 
+            ON p.Id = pa.ProductId
+        WHERE p.Id = @Id";
+
+        await using var conn = (SqlConnection)Conn;
+        await conn.OpenAsync();
+
+        await using var cmd = new SqlCommand(query, conn);
+
+        cmd.Parameters.Add("@Id", SqlDbType.NVarChar).Value = id;
+
+        await using var reader = await cmd.ExecuteReaderAsync();
+
+        Product? product = null;
+
+        while (await reader.ReadAsync())
+        {
+            if (product == null)
+            {
+                product = new Product
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                    Name = reader.GetString(reader.GetOrdinal("Name")),
+                    Attributes = new List<ProductAttribute>()
+                };
+            }
+
+            // Product may not have attributes
+            if (!reader.IsDBNull(reader.GetOrdinal("AttributeId")))
+            {
+                product.Attributes.Add(new ProductAttribute
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("AttributeId")),
+                    ProductId = reader.GetInt32(reader.GetOrdinal("ProductId")),
+                    AttributeName = reader.GetString(reader.GetOrdinal("AttributeName")),
+                    AttributeValue = reader.IsDBNull(reader.GetOrdinal("AttributeValue"))
+                        ? null
+                        : reader.GetString(reader.GetOrdinal("AttributeValue"))
+                });
+            }
+        }
+
+        return product;
     }
 
     public Task InsertAsync(Product product)
