@@ -37,7 +37,7 @@ Return response
 
 This reduces external API calls and improves performance.
 
-public Api
+public Api :
 https://restful-api.dev/
 
 Repository & Project Setup
@@ -49,6 +49,7 @@ The repository is created at the beginning of development, and changes are commi
 Clone repository
 
 git clone https://github.com/subkrishk1989-max/LiquidLabsAssessment.git
+
 cd \LiquidLabsAssessment\LiquidLabsAssessment
 
 2. Setup database
