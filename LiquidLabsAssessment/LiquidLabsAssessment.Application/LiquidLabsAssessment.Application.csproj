@@ -10,7 +10,10 @@
     <Folder Include="Common\" />
     <Folder Include="Features\Products\Handlers\" />
     <Folder Include="Features\Products\Queries\" />
-    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LiquidLabsAssessment.Domain\LiquidLabsAssessment.Domain.csproj" />
   </ItemGroup>
 
 </Project>

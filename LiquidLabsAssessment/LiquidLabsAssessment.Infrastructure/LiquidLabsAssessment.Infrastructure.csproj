@@ -5,10 +5,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+  
   <ItemGroup>
-    <Folder Include="External\" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <Folder Include="Persistence\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\LiquidLabsAssessment.Application\LiquidLabsAssessment.Application.csproj" />
   </ItemGroup>
 
 </Project>
