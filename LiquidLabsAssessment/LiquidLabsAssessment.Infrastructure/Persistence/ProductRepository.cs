@@ -131,8 +131,33 @@ public class ProductRepository : IProductRepository
         return product;
     }
 
-    public Task InsertAsync(Product product)
+    public async Task InsertAsync(Product product)
     {
-        throw new NotImplementedException();
+        using var conn = Conn;
+        conn.Open();
+
+        var cmd = new SqlCommand(
+            "INSERT INTO Products(Id,Name) VALUES(@Id,@Name)",
+            (SqlConnection)conn);
+
+        cmd.Parameters.AddWithValue("@Id", product.Id);
+        cmd.Parameters.AddWithValue("@Name", product.Name);
+
+        await cmd.ExecuteNonQueryAsync();
+
+        foreach (var a in product.Attributes)
+        {
+            var attrCmd = new SqlCommand(@"
+                INSERT INTO ProductAttributes
+                (ProductId,AttributeName,AttributeValue)
+                VALUES(@ProductId,@Name,@Value)",
+                (SqlConnection)conn);
+
+            attrCmd.Parameters.AddWithValue("@ProductId", product.Id);
+            attrCmd.Parameters.AddWithValue("@Name", a.AttributeName);
+            attrCmd.Parameters.AddWithValue("@Value", a.AttributeValue ?? "");
+
+            await attrCmd.ExecuteNonQueryAsync();
+        }
     }
 }
